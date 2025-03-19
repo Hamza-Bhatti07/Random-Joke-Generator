@@ -2,7 +2,7 @@ function fetchJoke() {
     document.getElementById("joke").innerText = "";
     document.getElementById("loading").style.display = "block";
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://v2.jokeapi.dev/joke/Any?type=twopart&blacklistFlags=racist,sexist,explicit,political,religious,nsfw", true);
+    xhr.open("GET", "https://v2.jokeapi.dev/joke/Any?safe-mode", true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4) {
             document.getElementById("loading").style.display = "none";
